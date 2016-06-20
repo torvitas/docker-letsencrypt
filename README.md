@@ -1,7 +1,8 @@
 # remote letsencrypt webroot
 this container can be used to regenerate certificates on a remote system
 
-```vhost1:
+```
+vhost1:
     image: torvitas/letsencrypt
     privileged: true
     command: 'app:run'
@@ -26,4 +27,5 @@ vhost2:
         CERT_HOST: "vhost2.com"
         CERT_MAIL: "info@domain.com"
     volumes:
-        - ./ssh:/root/.ssh```
+        - ./ssh:/root/.ssh
+```
